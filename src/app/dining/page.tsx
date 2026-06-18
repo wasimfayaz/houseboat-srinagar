@@ -5,8 +5,8 @@ import BookingBanner from '@/components/BookingBanner';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Wazwan Dining & Cuisine | Nagin Nest Houseboat Kashmir",
-  description: "Experience the royal Kashmiri Wazwan feast on Nagin Lake. Multi-course traditional meals prepared by our master chef.",
+  title: "Dining & Cuisine | [YOUR HOUSEBOAT NAME]",
+  description: "Experience the royal Kashmiri culinary tradition on [LOCATION]. Multi-course traditional meals prepared by our master chef.",
 };
 
 export default function DiningPage() {

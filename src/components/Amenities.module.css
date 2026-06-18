@@ -59,9 +59,13 @@
 }
 
 .rowTitle::before {
-  content: '✦';
-  color: var(--color-accent-gold);
-  font-size: 14px;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--color-accent-gold);
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .itemsGrid {

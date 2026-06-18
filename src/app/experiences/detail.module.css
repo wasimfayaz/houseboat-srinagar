@@ -96,6 +96,14 @@
   height: 400px;
   margin-bottom: 40px;
   border: 1px solid var(--color-border-light);
+  overflow: hidden;
+}
+
+.detailImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .bodyText {

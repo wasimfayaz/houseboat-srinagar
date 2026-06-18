@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Cookies Policy | Nagin Nest Houseboats",
+  title: "Cookies Policy | [YOUR HOUSEBOAT NAME]",
   description: "Learn how we use cookies to improve your booking experience.",
 };
 

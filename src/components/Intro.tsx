@@ -5,26 +5,56 @@ import styles from './Intro.module.css';
 
 const pillars = [
   {
-    icon: '✦',
     title: 'Century-Old Craft',
     desc: 'Every houseboat is hand-carved by master artisans whose families have perfected Kashmiri deodar woodwork for generations.',
   },
   {
-    icon: '✦',
     title: 'Pure Dal Air',
     desc: 'Wake to mist over the Himalayas. Breathe crisp mountain air as morning light dances on the glassy water below your window.',
   },
   {
-    icon: '✦',
     title: 'Royal Wazwan Table',
     desc: 'Feast on a private multi-course Wazwan — Kashmir\'s ancient royal banquet tradition — curated by our master Waza chef.',
   },
   {
-    icon: '✦',
     title: 'Shikara at Your Door',
     desc: 'Your personal shikara and guide are always ready — for floating gardens, flower markets, or a moonlit glide across the lake.',
   },
 ];
+
+const getPillarIcon = (index: number) => {
+  switch (index) {
+    case 0: // Century-Old Craft
+      return (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-gold)" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+        </svg>
+      );
+    case 1: // Pure Dal Air
+      return (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-gold)" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M17 18a5 5 0 0 0-10 0" strokeOpacity="0.3" />
+          <path d="M12 2L2 9h3v11h14V9h3L12 2z" />
+        </svg>
+      );
+    case 2: // Royal Wazwan Table
+      return (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-gold)" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <circle cx="12" cy="12" r="4" fill="var(--color-accent-gold)" fillOpacity="0.1" />
+          <path d="M12 2v2M12 20v2M2 12h2M20 12h2" strokeOpacity="0.3" />
+        </svg>
+      );
+    case 3: // Shikara at Your Door
+      default:
+      return (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-gold)" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M22 12H2M3 12l3 7h12l3-7M12 2v10" />
+          <path d="M9 5l3-3 3 3" strokeOpacity="0.3" />
+        </svg>
+      );
+  }
+};
 
 export default function Intro() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -58,9 +88,9 @@ export default function Intro() {
             <em>Most Sacred Waters</em>
           </h2>
           <p className={styles.introText}>
-            Nagin Nest is not a hotel — it is an exclusively crafted floating heritage home,
-            a masterpiece of cedar and walnut carved by master craftsmen who learned their art
-            from their fathers, and their fathers before them. Here, time slows. The mountains listen.
+            [YOUR HOUSEBOAT NAME] is not just a hotel — it is an exclusively crafted floating heritage home,
+            a masterpiece of cedar and walnut carved by master craftsmen who have refined their art
+            over generations. Here, time slows. The mountains listen.
             And the lake holds you as its most honoured guest.
           </p>
         </div>
@@ -76,7 +106,7 @@ export default function Intro() {
               style={{ transitionDelay: `${i * 0.12}s` }}
               id={`pillar-${i}`}
             >
-              <div className={styles.pillarIcon}>{pillar.icon}</div>
+              <div className={styles.pillarIcon}>{getPillarIcon(i)}</div>
               <h3 className={styles.pillarTitle}>{pillar.title}</h3>
               <p className={styles.pillarDesc}>{pillar.desc}</p>
             </div>
@@ -84,44 +114,6 @@ export default function Intro() {
         </div>
       </div>
 
-      {/* Split Feature */}
-      <div className={styles.splitFeature}>
-        <div className={`${styles.splitImage} reveal-left`}>
-          <div className="white-placeholder">
-            <span className="white-placeholder-label">Dal Lake Aerial View</span>
-          </div>
-          <div className={styles.splitImageOverlay} />
-          <div className={styles.splitImageTag}>
-            <span>Dal Lake, Srinagar</span>
-            <span>1,700m above sea level</span>
-          </div>
-        </div>
-
-        <div className={`${styles.splitContent} reveal-right`}>
-          <span className="section-number">02 / Heritage</span>
-          <h2 className={`section-title ${styles.splitTitle}`}>
-            5,000 Years of Floating Culture
-          </h2>
-          <p className={styles.splitText}>
-            Dal Lake has cradled Kashmiri civilisation since ancient times. Mughal emperors
-            declared it "Paradise on Earth." British officers, smitten by its beauty but barred from
-            owning land, commissioned the first houseboats in the 1880s — and thus began a tradition
-            that now lives on in our care.
-          </p>
-          <p className={styles.splitText}>
-            Each Nagin Nest houseboat is individually registered, insured, and maintained to the
-            highest standards — preserving authentic craftsmanship while delivering every modern luxury.
-          </p>
-          <div className={styles.splitFeatures}>
-            {['Hand-carved deodar cedar interiors', 'Private sun deck with mountain views', '24-hour personal butler', 'Curated shikara experiences'].map((f, i) => (
-              <div key={i} className={styles.splitFeatureItem}>
-                <span className={styles.checkmark}>✦</span>
-                <span>{f}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

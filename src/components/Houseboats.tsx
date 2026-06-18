@@ -6,34 +6,37 @@ import styles from './Houseboats.module.css';
 
 const rooms = [
   {
-    id: 'maharaja-suite',
-    name: 'The Maharaja Suite',
-    category: 'Grand Heritage Suite',
-    tagline: 'The crown jewel room of Nagin Nest',
-    price: '₹18,500',
+    id: 'room-1',
+    name: '[ROOM NAME 1]',
+    category: '[ROOM CATEGORY]',
+    tagline: '[ROOM TAGLINE OR SHORT DESCRIPTION]',
+    price: '[PRICE]',
     unit: '/ night',
-    features: ['King Bed', 'Private Deck', 'Heritage Bath', 'Butler Call'],
+    features: ['[Feature 1]', '[Feature 2]', '[Feature 3]', '[Feature 4]'],
     badge: 'Most Popular',
+    image: '/maharaja-suite.png',
   },
   {
-    id: 'mughal-room',
-    name: 'The Mughal Room',
-    category: 'Classic Heritage Room',
-    tagline: 'Traditional carved cedar, warm comforts',
-    price: '₹12,000',
+    id: 'room-2',
+    name: '[ROOM NAME 2]',
+    category: '[ROOM CATEGORY]',
+    tagline: '[ROOM TAGLINE OR SHORT DESCRIPTION]',
+    price: '[PRICE]',
     unit: '/ night',
-    features: ['Queen Bed', 'Carved Cedar Wood', 'Attached Bath', 'Lake View'],
+    features: ['[Feature 1]', '[Feature 2]', '[Feature 3]', '[Feature 4]'],
     badge: null,
+    image: '/mughal-room.png',
   },
   {
-    id: 'shalimar-room',
-    name: 'The Shalimar Room',
-    category: 'Deluxe Couple Sanctuary',
-    tagline: 'A romantic, cozy lakeside escape',
-    price: '₹9,800',
+    id: 'room-3',
+    name: '[ROOM NAME 3]',
+    category: '[ROOM CATEGORY]',
+    tagline: '[ROOM TAGLINE OR SHORT DESCRIPTION]',
+    price: '[PRICE]',
     unit: '/ night',
-    features: ['Double Bed', 'Sunset Balcony', 'Attached Bath', 'Cozy Seating'],
+    features: ['[Feature 1]', '[Feature 2]', '[Feature 3]', '[Feature 4]'],
     badge: 'Romantic',
+    image: '/shalimar-room.png',
   },
 ];
 
@@ -67,8 +70,8 @@ export default function Houseboats() {
         </div>
         <div className={`${styles.hbTopRight} reveal-right`}>
           <p className={styles.hbDesc}>
-            Nagin Nest is a single, custom-designed heritage houseboat. With only three private en-suite 
-            guest rooms on board, we ensure absolute tranquility and personal attention.
+            [YOUR HOUSEBOAT NAME] features [NUMBER] exclusive guest rooms on board, each thoughtfully designed
+            to offer privacy, heritage craftsmanship, and breathtaking lake views.
           </p>
           <Link href="/booking" className={styles.viewAll} id="view-all-houseboats">
             <span>Book Your Stay</span>
@@ -89,9 +92,11 @@ export default function Houseboats() {
           >
             {/* Image */}
             <div className={styles.hbCardImage}>
-              <div className="white-placeholder">
-                <span className="white-placeholder-label">{room.name}</span>
-              </div>
+              <img 
+                src={room.image} 
+                alt={room.name} 
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
               <div className={styles.hbImageOverlay} />
               {room.badge && (
                 <div className={styles.hbBadge}>{room.badge}</div>

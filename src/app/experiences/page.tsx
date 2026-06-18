@@ -5,8 +5,8 @@ import BookingBanner from '@/components/BookingBanner';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Curated Kashmiri Experiences | Nagin Nest Houseboats",
-  description: "Immerse yourself in Srinagar's timeless culture. Nagin Nest offers sunrise shikara journeys, traditional 12-course Wazwan feasts, and guided Himalayan treks.",
+  title: "Curated Kashmiri Experiences | [YOUR HOUSEBOAT NAME]",
+  description: "Immerse yourself in Srinagar's timeless culture. Sunrise shikara journeys, traditional Wazwan feasts, and guided Himalayan treks.",
 };
 
 export default function ExperiencesPage() {

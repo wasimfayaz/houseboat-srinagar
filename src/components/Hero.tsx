@@ -22,9 +22,11 @@ export default function Hero() {
     <section className={styles.hero} id="hero">
       {/* Parallax Background */}
       <div className={styles.heroBg} ref={parallaxRef}>
-        <div className="white-placeholder">
-          <span className="white-placeholder-label">Hero Background Placeholder</span>
-        </div>
+        <img 
+          src="/hero-houseboat.png" 
+          alt="Luxury houseboat on Nagin Lake" 
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
       </div>
 
       {/* Gradient Overlays */}
@@ -34,7 +36,11 @@ export default function Hero() {
 
       {/* Floating Badges */}
       <div className={styles.badge} id="hero-rating-badge">
-        <span className={styles.badgeStar}>★</span>
+        <span className={styles.badgeStar}>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent-gold)" stroke="none">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </span>
         <div>
           <div className={styles.badgeTitle}>Award-Winning</div>
           <div className={styles.badgeSub}>Luxury Stay 2024</div>
@@ -44,7 +50,7 @@ export default function Hero() {
       {/* Hero Content */}
       <div className={styles.heroContent}>
         <div className={styles.heroInner}>
-          <span className={styles.eyebrow}>01 &nbsp;/&nbsp; NAGIN LAKE, SRINAGAR</span>
+          <span className={styles.eyebrow}>01 &nbsp;/&nbsp; [LOCATION]</span>
 
           <h1 className={styles.heroTitle}>
             Where Heaven<br />
@@ -52,13 +58,13 @@ export default function Hero() {
           </h1>
 
           <p className={styles.heroDesc}>
-            Float above the mirror of the Himalayas in an exclusively crafted deodar sanctuary,
-            where centuries of Kashmiri heritage surround your every moment.
+            [YOUR PROPERTY DESCRIPTION] — A luxury houseboat experience where centuries of heritage
+            meet modern comfort on the waters of Kashmir.
           </p>
 
           <div className={styles.heroCtas}>
             <Link href="/booking" className={styles.ctaPrimary} id="hero-book-btn">
-              <span>Reserve Your Sanctuary</span>
+              <span>Reserve Your Houseboat</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
@@ -71,17 +77,22 @@ export default function Hero() {
           {/* Stats */}
           <div className={styles.stats}>
             <div className={styles.stat}>
-              <span className={styles.statNum}>35+</span>
+              <span className={styles.statNum}>[YEARS]</span>
               <span className={styles.statLabel}>Years of Heritage</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <span className={styles.statNum}>500+</span>
+              <span className={styles.statNum}>[GUESTS]+</span>
               <span className={styles.statLabel}>Happy Guests</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <span className={styles.statNum}>4.9★</span>
+              <span className={styles.statNum} style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                [RATING]
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent-gold)" stroke="none" style={{ flexShrink: 0 }}>
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </span>
               <span className={styles.statLabel}>Guest Rating</span>
             </div>
           </div>

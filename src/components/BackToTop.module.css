@@ -1,0 +1,59 @@
+.backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: var(--color-accent-gold, #c9a96e);
+  color: var(--color-deep-teal, #0a2930);
+  border: 1px solid var(--color-accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 990;
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.backToTop.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.backToTop:hover {
+  background-color: var(--color-deep-teal, #0a2930);
+  color: var(--color-accent-gold, #c9a96e);
+  border-color: var(--color-accent-gold);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-gold);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.backToTop:hover .arrow {
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments to avoid overlapping mobile sticky book bar */
+@media (max-width: 640px) {
+  .backToTop {
+    bottom: 80px; /* Float above the mobile booking bar (60px) */
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}

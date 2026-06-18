@@ -62,7 +62,7 @@ export default function Amenities({ hideCta = false }: { hideCta?: boolean }) {
             Crafted for <em style={{ fontStyle: 'italic', color: 'var(--color-accent-gold)' }}>Every Comfort</em>
           </h2>
           <p className={styles.amenitiesDesc}>
-            Every service aboard a Nagin Nest houseboat is thoughtfully chosen to deepen your connection
+            Every service aboard [YOUR HOUSEBOAT NAME] is thoughtfully chosen to deepen your connection
             with Kashmir — not to replace it.
           </p>
         </div>
@@ -79,7 +79,11 @@ export default function Amenities({ hideCta = false }: { hideCta?: boolean }) {
               <div className={styles.itemsGrid}>
                 {col.items.map((item, idx) => (
                   <div key={idx} className={styles.itemCard}>
-                    <span className={styles.itemBullet}>✦</span>
+                    <span className={styles.itemBullet}>
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" style={{ display: 'block', color: 'var(--color-accent-gold)' }}>
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
                     <span>{item}</span>
                   </div>
                 ))}

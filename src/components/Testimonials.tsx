@@ -6,39 +6,39 @@ import styles from './Testimonials.module.css';
 const testimonials = [
   {
     id: 1,
-    name: 'Arjun & Priya Mehta',
-    location: 'Mumbai, India',
+    name: '[GUEST NAME]',
+    location: '[GUEST LOCATION]',
     rating: 5,
-    text: 'We stayed for our honeymoon and still talk about it every single day. Waking up to the mist rising off Dal Lake, with carved cedar all around us — there is simply nothing like it in the world. The Wazwan dinner on our private deck was the most memorable meal of our lives.',
-    stay: 'Royal Cedar Houseboat · 5 Nights',
-    avatar: 'A',
+    text: '[GUEST REVIEW TEXT — Replace with an authentic testimonial from a real guest who stayed at your houseboat. Describe their experience, what they loved most, and why they would recommend it to others.]',
+    stay: '[ROOM NAME] · [NUMBER] Nights',
+    avatar: 'G',
   },
   {
     id: 2,
-    name: 'James & Eleanor Whitfield',
-    location: 'London, United Kingdom',
+    name: '[GUEST NAME]',
+    location: '[GUEST LOCATION]',
     rating: 5,
-    text: 'We have stayed at luxury properties across Asia, from Bali to the Maldives. Nagin Nest is in a category entirely of its own. The personal butler, the shikara rides at sunrise, the absolute quiet — it is the most restorative experience we have ever had as travellers.',
-    stay: 'Naltar Retreat · 7 Nights',
-    avatar: 'J',
+    text: '[GUEST REVIEW TEXT — Replace with an authentic testimonial from a real guest. Share their unique experience and what made their stay special.]',
+    stay: '[ROOM NAME] · [NUMBER] Nights',
+    avatar: 'G',
   },
   {
     id: 3,
-    name: 'Fatima Al-Hassan',
-    location: 'Dubai, UAE',
+    name: '[GUEST NAME]',
+    location: '[GUEST LOCATION]',
     rating: 5,
-    text: 'I came to Kashmir expecting beauty, but Nagin Nest gave me something I did not anticipate: genuine peace. The craftsmanship of the houseboat interior left me speechless. Every carving tells a story. The team treated us like family from the very first moment.',
-    stay: 'Nagin Pearl · 4 Nights',
-    avatar: 'F',
+    text: '[GUEST REVIEW TEXT — Replace with an authentic testimonial describing the ambience, hospitality, cuisine, and overall experience at your houseboat.]',
+    stay: '[ROOM NAME] · [NUMBER] Nights',
+    avatar: 'G',
   },
   {
     id: 4,
-    name: 'David Chen',
-    location: 'Singapore',
+    name: '[GUEST NAME]',
+    location: '[GUEST LOCATION]',
     rating: 5,
-    text: 'As a photographer, I have been chasing light all my life. Dal Lake at dawn, seen from the deck of our houseboat, is the most extraordinary light I have ever photographed. The staff arranged a private shikara for my sunrise shoots every morning. Absolutely exceptional service.',
-    stay: 'Royal Cedar Houseboat · 6 Nights',
-    avatar: 'D',
+    text: '[GUEST REVIEW TEXT — Replace with a real guest review highlighting exceptional service, views, food, or any standout aspect of their stay.]',
+    stay: '[ROOM NAME] · [NUMBER] Nights',
+    avatar: 'G',
   },
 ];
 
@@ -109,7 +109,9 @@ export default function Testimonials() {
             </div>
             <div className={styles.tRating}>
               {Array.from({ length: t.rating }).map((_, i) => (
-                <span key={i} className={styles.tStar}>★</span>
+                                <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent-gold)" stroke="var(--color-accent-gold)" strokeWidth="1" className={styles.tStar}>
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
               ))}
             </div>
           </div>
@@ -139,23 +141,35 @@ export default function Testimonials() {
       {/* Review Platform Badges */}
       <div className={`${styles.tBadges} reveal`}>
         <div className={styles.tBadge}>
-          <span className={styles.tBadgeNum}>4.9</span>
+          <span className={styles.tBadgeNum}>[RATING]</span>
           <div>
-            <div className={styles.tBadgeStars}>★★★★★</div>
+            <div className={styles.tBadgeStars}>
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} width="11" height="11" viewBox="0 0 24 24" fill="var(--color-accent-gold)" stroke="none">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              ))}
+            </div>
             <div className={styles.tBadgeSource}>TripAdvisor</div>
           </div>
         </div>
         <div className={styles.tBadgeDivider} />
         <div className={styles.tBadge}>
-          <span className={styles.tBadgeNum}>9.8</span>
+          <span className={styles.tBadgeNum}>[RATING]</span>
           <div>
-            <div className={styles.tBadgeStars}>★★★★★</div>
+            <div className={styles.tBadgeStars}>
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} width="11" height="11" viewBox="0 0 24 24" fill="var(--color-accent-gold)" stroke="none">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              ))}
+            </div>
             <div className={styles.tBadgeSource}>Booking.com</div>
           </div>
         </div>
         <div className={styles.tBadgeDivider} />
         <div className={styles.tBadge}>
-          <span className={styles.tBadgeNum}>500+</span>
+          <span className={styles.tBadgeNum}>[REVIEWS]+</span>
           <div>
             <div className={styles.tBadgeStars}>Reviews</div>
             <div className={styles.tBadgeSource}>Verified Guests</div>

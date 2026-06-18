@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import BackToTop from "@/components/BackToTop";
+import TemplateBadge from "@/components/TemplateBadge";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nagin Nest Houseboats | Luxury Houseboat Stay on Dal Lake, Kashmir",
-  description: "Experience the timeless elegance of a Kashmiri houseboat on Dal Lake. Nagin Nest offers handcrafted luxury, traditional Wazwan cuisine, and curated Himalayan experiences. Book your stay in paradise.",
-  keywords: "Kashmir houseboat, Dal Lake, luxury houseboat, Kashmir tourism, Nagin Lake, Srinagar houseboat, Kashmir travel",
+  title: "[YOUR HOUSEBOAT NAME] | Luxury Houseboat Stay on Dal Lake, Kashmir",
+  description: "[YOUR TAGLINE] — Experience the timeless elegance of a Kashmiri houseboat on Dal Lake. Handcrafted luxury, traditional cuisine, and curated Himalayan experiences.",
+  keywords: "Kashmir houseboat, Dal Lake, luxury houseboat, Kashmir tourism, Srinagar houseboat, Kashmir travel",
   openGraph: {
-    title: "Nagin Nest Houseboats | Luxury Stay on Dal Lake",
-    description: "Where the Himalayas meet the water — a floating sanctuary of Kashmiri elegance.",
+    title: "[YOUR HOUSEBOAT NAME] | Luxury Stay on Dal Lake",
+    description: "[YOUR TAGLINE] — A floating sanctuary of Kashmiri elegance.",
     type: "website",
   },
 };
@@ -19,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <BackToTop />
+        <TemplateBadge />
+      </body>
     </html>
   );
 }

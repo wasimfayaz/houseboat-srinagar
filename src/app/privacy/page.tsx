@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Privacy Policy | Nagin Nest Houseboats",
+  title: "Privacy Policy | [YOUR HOUSEBOAT NAME]",
   description: "Our privacy policy details how we handle guest data for reservations and stays.",
 };
 
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
           <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '36px', color: 'var(--color-deep-teal)', fontWeight: 300, marginBottom: '24px' }}>Privacy Policy</h1>
           <div style={{ fontFamily: 'var(--font-sans)', fontSize: '15px', color: 'var(--color-text-secondary)', lineHeight: 1.7 }}>
             <p style={{ marginBottom: '20px' }}>
-              At Nagin Nest Houseboats, we are committed to safeguarding the privacy of our guests. This Policy explains how we collect, use, and store your personal information when you book or stay with us.
+              At [YOUR HOUSEBOAT NAME], we are committed to safeguarding the privacy of our guests. This Policy explains how we collect, use, and store your personal information when you book or stay with us.
             </p>
             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '20px', color: 'var(--color-deep-teal)', marginTop: '32px', marginBottom: '16px', fontWeight: 500 }}>Information Collection</h2>
             <p style={{ marginBottom: '20px' }}>

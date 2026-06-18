@@ -20,8 +20,8 @@ export default function BookingPage() {
   }, []);
 
   const handleWhatsAppChat = () => {
-    const phoneNumber = '918899779869';
-    const message = `Hi! I would like to book a stay at Nagin Nest Houseboats.\n\nRoom selection: ${room}\nMeal plan selection: ${mealPlan}`;
+    const phoneNumber = '[WHATSAPP NUMBER]';
+    const message = `Hi! I would like to book a stay at [YOUR HOUSEBOAT NAME].\n\nRoom selection: ${room}\nMeal plan selection: ${mealPlan}`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
@@ -146,8 +146,8 @@ export default function BookingPage() {
             {/* Assistance Section */}
             <div className={styles.assistanceSection}>
               <div className={styles.assistanceLabel}>Need Assistance?</div>
-              <a href="tel:+918899779869" className={styles.assistancePhone}>
-                +91 88997 79869
+              <a href="tel:[PHONE NUMBER]" className={styles.assistancePhone}>
+                [PHONE NUMBER]
               </a>
             </div>
           </div>

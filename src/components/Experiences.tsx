@@ -7,7 +7,6 @@ import styles from './Experiences.module.css';
 const experiences = [
   {
     id: 'shikara-journey',
-    icon: '✦',
     title: 'Sunrise Shikara Journey',
     desc: 'Glide silently at dawn through the floating gardens and flower markets of Dal Lake. Watch Srinagar come alive in morning gold.',
     duration: '2–3 Hours',
@@ -16,7 +15,6 @@ const experiences = [
   },
   {
     id: 'wazwan-experience',
-    icon: '✦',
     title: 'Royal Wazwan Feast',
     desc: 'Our master Waza chef prepares a 12-course Kashmiri royal banquet on your private deck. An ancient culinary art, yours alone.',
     duration: '3 Hours',
@@ -25,7 +23,6 @@ const experiences = [
   },
   {
     id: 'valley-trek',
-    icon: '✦',
     title: 'Himalayan Valley Trek',
     desc: 'Journey into Gulmarg or Sonamarg with your private mountain guide. Alpine meadows, glaciers, and silence that goes on forever.',
     duration: 'Full Day',
@@ -33,6 +30,33 @@ const experiences = [
     image: '/valley-experiences.png',
   },
 ];
+
+const getExperienceIcon = (id: string) => {
+  switch (id) {
+    case 'shikara-journey':
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2v2M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+          <path d="M2 17c3-1.5 5 1.5 10 0s7 1.5 10 0" strokeOpacity="0.4"/>
+        </svg>
+      );
+    case 'wazwan-experience':
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 3a6 6 0 0 0-6 6v4h12V9a6 6 0 0 0-6-6z"/>
+          <path d="M2 17h20v2H2z" strokeOpacity="0.4"/>
+        </svg>
+      );
+    case 'valley-trek':
+      default:
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2L2 22h20L12 2z"/>
+          <path d="M2 22l6-8 4 4 6-7 4 3" strokeOpacity="0.4"/>
+        </svg>
+      );
+  }
+};
 
 export default function Experiences() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -57,9 +81,7 @@ export default function Experiences() {
     <section className={styles.experiences} id="experiences" ref={sectionRef}>
       {/* Background */}
       <div className={styles.expBg}>
-        <div className="white-placeholder">
-          <span className="white-placeholder-label">Experiences Background</span>
-        </div>
+        <img src="/dal-lake-aerial.png" alt="Dal Lake aerial view" className={styles.expBgImg} />
         <div className={styles.expBgOverlay} />
       </div>
 
@@ -87,15 +109,13 @@ export default function Experiences() {
             id={`experience-${exp.id}`}
           >
             <div className={styles.expCardImage}>
-              <div className="white-placeholder">
-                <span className="white-placeholder-label">{exp.title}</span>
-              </div>
+              <img src={exp.image} alt={exp.title} className={styles.cardImg} />
               <div className={styles.expCardOverlay} />
             </div>
 
             <div className={styles.expCardContent}>
               <div className={styles.expIconRow}>
-                <span className={styles.expIcon}>{exp.icon}</span>
+                <span className={styles.expIcon}>{getExperienceIcon(exp.id)}</span>
                 <span className={styles.expDuration}>{exp.duration}</span>
               </div>
               <h3 className={styles.expTitle}>{exp.title}</h3>

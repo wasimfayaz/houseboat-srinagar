@@ -5,8 +5,8 @@ import BookingBanner from '@/components/BookingBanner';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Our Services & Comforts | Nagin Nest Houseboats",
-  description: "Explore the comprehensive services at Nagin Nest Houseboats on Nagin Lake. Deluxe room categories, royal Kashmiri Wazwan dining, and high-fidelity comforts.",
+  title: "Services & Comforts | [YOUR HOUSEBOAT NAME]",
+  description: "Explore the comprehensive services at [YOUR HOUSEBOAT NAME]. Deluxe rooms, traditional Kashmiri dining, and heritage comforts.",
 };
 
 export default function AmenitiesPage() {
@@ -16,7 +16,7 @@ export default function AmenitiesPage() {
       <PageHeader 
         sectionNumber="08 / Services" 
         title="Our Services & Comforts" 
-        subtitle="Explore the complete hospitality ecosystem of Nagin Nest, from heritage suites to traditional culinary dining and modern amenities." 
+        subtitle="Explore the complete hospitality offering of [YOUR HOUSEBOAT NAME], from heritage guest rooms to traditional dining and modern amenities." 
       />
       <Amenities hideCta={true} />
       <BookingBanner />

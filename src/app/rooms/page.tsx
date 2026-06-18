@@ -5,8 +5,8 @@ import BookingBanner from '@/components/BookingBanner';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Sanctuaries & Rooms | Nagin Nest Houseboat Kashmir",
-  description: "Explore the Maharaja Suite, the Mughal Room, and the Shalimar Room. Handcrafted deodar woodwork, private decks, and luxury heritage stay on Nagin Lake.",
+  title: "Houseboat Rooms & Suites | [YOUR HOUSEBOAT NAME]",
+  description: "Explore our exclusive guest rooms. Handcrafted woodwork, private decks, and luxury heritage stay on [LOCATION].",
 };
 
 export default function RoomsPage() {
@@ -14,9 +14,9 @@ export default function RoomsPage() {
     <main>
       <Navbar />
       <PageHeader 
-        sectionNumber="03 / Sanctuaries" 
+        sectionNumber="03 / Guest Rooms" 
         title="Our Guest Rooms & Suites" 
-        subtitle="Nagin Nest is a single handcrafted deodar wood houseboat featuring three private guest sanctuaries, custom designed for ultimate tranquility." 
+        subtitle="[YOUR HOUSEBOAT NAME] features handcrafted heritage guest rooms, custom designed for ultimate privacy and tranquility on the lake." 
       />
       <Houseboats />
       <BookingBanner />

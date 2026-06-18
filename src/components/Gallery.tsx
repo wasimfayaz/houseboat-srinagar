@@ -49,9 +49,11 @@ export default function Gallery() {
             style={{ transitionDelay: `${i * 0.1}s` }}
             id={`gallery-item-${i}`}
           >
-            <div className="white-placeholder">
-              <span className="white-placeholder-label">Gallery Image</span>
-            </div>
+            <img 
+              src={item.src} 
+              alt={item.alt} 
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            />
             <div className={styles.mosaicOverlay}>
               <div className={styles.mosaicCaption}>{item.alt}</div>
             </div>

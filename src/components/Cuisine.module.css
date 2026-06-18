@@ -163,6 +163,8 @@
   letter-spacing: 0.06em;
   color: var(--color-accent-gold, #c9a96e);
   opacity: 0.8;
+  display: flex;
+  align-items: center;
 }
 
 /* Responsive */

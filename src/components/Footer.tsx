@@ -5,9 +5,9 @@ import styles from './Footer.module.css';
 
 const footerLinks = {
   rooms: [
-    { label: 'The Maharaja Suite', href: '/booking' },
-    { label: 'The Mughal Room', href: '/booking' },
-    { label: 'The Shalimar Room', href: '/booking' },
+    { label: '[ROOM NAME 1]', href: '/booking' },
+    { label: '[ROOM NAME 2]', href: '/booking' },
+    { label: '[ROOM NAME 3]', href: '/booking' },
   ],
   experiences: [
     { label: 'Shikara Journeys', href: '/experiences/shikara-journey' },
@@ -30,28 +30,33 @@ export default function Footer() {
         {/* Brand Column */}
         <div className={styles.footerBrand}>
           <div className={styles.footerLogo}>
-            <span className={styles.footerLogoIcon}>✦</span>
+            <span className={styles.footerLogoIcon}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: 'var(--color-accent-gold)' }}>
+                <path d="M12 2L9 9l-7 3 7 3 3 7 3-7 7-3-7-3-3-7z" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="12" cy="12" r="3" strokeOpacity="0.4"/>
+              </svg>
+            </span>
             <div>
-              <div className={styles.footerLogoMain}>Nagin Nest</div>
-              <div className={styles.footerLogoSub}>Luxury Houseboat · Kashmir</div>
+              <div className={styles.footerLogoMain}>[YOUR HOUSEBOAT NAME]</div>
+              <div className={styles.footerLogoSub}>[YOUR TAGLINE]</div>
             </div>
           </div>
           <p className={styles.footerTagline}>
-            Where the Himalayas meet the water — a floating sanctuary of Kashmiri elegance,
-            carrying five decades of heritage into every stay.
+            [YOUR HOUSEBOAT NAME] — [YOUR TAGLINE]. A floating heritage experience where
+            every stay is personal, private, and unforgettable.
           </p>
           <div className={styles.footerContact}>
             <div className={styles.footerContactItem}>
               <span style={{ color: 'var(--color-accent-gold)', marginRight: '4px', fontWeight: 500 }}>T:</span>
-              <span>+91 194 247 0000</span>
+              <span>[PHONE NUMBER]</span>
             </div>
             <div className={styles.footerContactItem}>
               <span style={{ color: 'var(--color-accent-gold)', marginRight: '4px', fontWeight: 500 }}>E:</span>
-              <span>stay@naginnest.com</span>
+              <span>[EMAIL ADDRESS]</span>
             </div>
             <div className={styles.footerContactItem}>
               <span style={{ color: 'var(--color-accent-gold)', marginRight: '4px', fontWeight: 500 }}>A:</span>
-              <span>Dal Gate, Srinagar, Kashmir 190001</span>
+              <span>[ADDRESS], [LOCATION]</span>
             </div>
           </div>
           <div className={styles.socialLinks}>
@@ -122,18 +127,64 @@ export default function Footer() {
               Book Your Stay
             </Link>
             <div className={styles.footerCtaBadge}>
-              <span>✦</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-accent-gold)' }}>
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
               <span>Best rate guaranteed</span>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Template Announcement Banner */}
+      <div className={styles.templateNotice}>
+        <div className={styles.templateNoticeInner}>
+          <div>
+            <div className={styles.templateNoticeHeader}>
+              <span className={styles.templateNoticeBadge}>Announcement</span>
+              <h4 className={styles.templateNoticeTitle}>Template Available for Purchase</h4>
+            </div>
+            <p className={styles.templateNoticeText}>
+              This website is a premium template designed for luxury houseboats, hotels, and boutique stays. 
+              All photos, descriptions, guest rooms, and rates are customizable placeholders.
+            </p>
+            <p className={styles.templateNoticeText}>
+              Designed & developed by <strong>Wasim Pakhtoon</strong>. Contact for purchase, custom branding, or complete website setup.
+            </p>
+          </div>
+          <div className={styles.templateNoticeActions}>
+            <a 
+              href="https://wa.me/919596390069?text=Hi%20Wasim,%20I'm%20interested%20in%20purchasing%20or%20customizing%20the%20houseboat%20website%20template." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.templateNoticeBtn}
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '8px' }}>
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+              WhatsApp Wasim
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Template Preview Note */}
+      <div className={styles.templatePreviewNote}>
+        <span className={styles.templatePreviewText}>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '8px', verticalAlign: 'middle', flexShrink: 0, opacity: 0.6 }}>
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          Template Preview &mdash; All names, images, contact details, descriptions, and business information shown are placeholders for demonstration purposes. Upon purchase, all content will be replaced with your actual business details.
+        </span>
+      </div>
+
       {/* Bottom Bar */}
       <div className={styles.footerBottom}>
         <div className={styles.footerBottomInner}>
           <p className={styles.copyright}>
-            © {new Date().getFullYear()} Nagin Nest Houseboats · Srinagar, Kashmir. All rights reserved.
+            © {new Date().getFullYear()} [YOUR HOUSEBOAT NAME] · [LOCATION]. All rights reserved.
           </p>
           <div className={styles.footerBottomLinks}>
             <Link href="/privacy" className={styles.footerBottomLink}>Privacy Policy</Link>

@@ -5,8 +5,8 @@ import BookingBanner from '@/components/BookingBanner';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Our Story & Floating Heritage | Nagin Nest Houseboats",
-  description: "Learn about the heritage of Nagin Nest Houseboats. Handcrafted deodar wood structures, Mughal history influences, and generations of traditional hospitality.",
+  title: "Our Story & Heritage | [YOUR HOUSEBOAT NAME]",
+  description: "Learn about the heritage of [YOUR HOUSEBOAT NAME]. Handcrafted deodar wood structures, traditional history, and generations of warm hospitality.",
 };
 
 export default function StoryPage() {
@@ -16,7 +16,7 @@ export default function StoryPage() {
       <PageHeader 
         sectionNumber="02 / Heritage" 
         title="A Living Floating Palace" 
-        subtitle="Crafted in deodar cedar, Nagin Nest represents a rich history of Srinagar's classic water culture." 
+        subtitle="[YOUR HOUSEBOAT NAME] represents a rich history of Kashmir's classic water culture and floating heritage." 
       />
       <Intro />
       <BookingBanner />

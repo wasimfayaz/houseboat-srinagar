@@ -3,8 +3,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Terms of Service | Nagin Nest Houseboats",
-  description: "Terms and conditions for booking and staying on board Nagin Nest Houseboats.",
+  title: "Terms of Service | [YOUR HOUSEBOAT NAME]",
+  description: "Terms and conditions for booking and staying on board [YOUR HOUSEBOAT NAME].",
 };
 
 export default function TermsPage() {
@@ -19,7 +19,7 @@ export default function TermsPage() {
           <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: '36px', color: 'var(--color-deep-teal)', fontWeight: 300, marginBottom: '24px' }}>Terms of Service</h1>
           <div style={{ fontFamily: 'var(--font-sans)', fontSize: '15px', color: 'var(--color-text-secondary)', lineHeight: 1.7 }}>
             <p style={{ marginBottom: '20px' }}>
-              Welcome to Nagin Nest Houseboats. By booking a room or staying on board our floating sanctuary, you agree to comply with and be bound by the following terms and conditions.
+              Welcome to [YOUR HOUSEBOAT NAME]. By booking a room or staying on board our floating sanctuary, you agree to comply with and be bound by the following terms and conditions.
             </p>
             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '20px', color: 'var(--color-deep-teal)', marginTop: '32px', marginBottom: '16px', fontWeight: 500 }}>Reservations & Payments</h2>
             <p style={{ marginBottom: '20px' }}>

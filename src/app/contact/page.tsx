@@ -48,7 +48,7 @@ export default function ContactPage() {
                 <div className={styles.infoText}>
                   <span className={styles.infoLabel}>Instant Messaging</span>
                   <a 
-                    href="https://wa.me/918899779869?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20staying%20at%20Nagin%20Nest." 
+                    href="https://wa.me/[WHATSAPP NUMBER]?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20houseboat." 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className={styles.infoValue}
@@ -65,8 +65,8 @@ export default function ContactPage() {
                 <div className={styles.infoIcon} style={{ fontSize: '16px', fontWeight: 600 }}>T</div>
                 <div className={styles.infoText}>
                   <span className={styles.infoLabel}>Phone Enquiries</span>
-                  <a href="tel:+918899779869" className={styles.infoValue}>
-                    +91 88997 79869
+                  <a href="tel:[PHONE NUMBER]" className={styles.infoValue}>
+                    [PHONE NUMBER]
                   </a>
                   <span className={styles.infoSub}>Reservations Desk & Guest Services</span>
                 </div>
@@ -77,8 +77,8 @@ export default function ContactPage() {
                 <div className={styles.infoIcon} style={{ fontSize: '16px', fontWeight: 600 }}>E</div>
                 <div className={styles.infoText}>
                   <span className={styles.infoLabel}>Email</span>
-                  <a href="mailto:stay@naginnest.com" className={styles.infoValue}>
-                    stay@naginnest.com
+                  <a href="mailto:[EMAIL ADDRESS]" className={styles.infoValue}>
+                    [EMAIL ADDRESS]
                   </a>
                   <span className={styles.infoSub}>For corporate bookings & travel agents</span>
                 </div>
@@ -90,7 +90,7 @@ export default function ContactPage() {
                 <div className={styles.infoText}>
                   <span className={styles.infoLabel}>Our Anchorage</span>
                   <span className={styles.infoValue}>
-                    Nagin Lake, Srinagar, Kashmir 190001
+                    [ADDRESS], [LOCATION]
                   </span>
                   <span className={styles.infoSub}>Access via private Shikara crossing</span>
                 </div>
@@ -102,9 +102,14 @@ export default function ContactPage() {
               <div className={styles.mapPlaceholder}>
                 <div className={styles.mapOverlay} />
                 <div className={styles.mapPlaceholderInner}>
-                  <span className={styles.mapPin} style={{ color: 'var(--color-accent-gold)', fontSize: '24px' }}>✦</span>
-                  <h3 className={styles.mapPlaceholderTitle}>Nagin Lake Anchorage</h3>
-                  <p className={styles.mapPlaceholderDesc}>Srinagar, Jammu & Kashmir 190001</p>
+                  <span className={styles.mapPin}>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                  </span>
+                  <h3 className={styles.mapPlaceholderTitle}>[LOCATION] Anchorage</h3>
+                  <p className={styles.mapPlaceholderDesc}>[ADDRESS], [LOCATION]</p>
                 </div>
               </div>
             </div>

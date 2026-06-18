@@ -5,8 +5,8 @@ import BookingBanner from '@/components/BookingBanner';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Visual Gallery of Dal & Nagin Lake | Nagin Nest Houseboats",
-  description: "Browse the visual beauty of Srinagar, Kashmir. Exquisite deodar woodcarvings, majestic Himalayan backdrops, and tranquil lake waters captured in images.",
+  title: "Photo Gallery | [YOUR HOUSEBOAT NAME]",
+  description: "Browse the visual beauty of Kashmir. Exquisite woodcarvings, majestic Himalayan backdrops, and tranquil lake waters captured in images.",
 };
 
 export default function GalleryPage() {

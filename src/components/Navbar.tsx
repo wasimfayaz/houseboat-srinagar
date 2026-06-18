@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
 
 const navLinks = [
@@ -17,6 +18,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -24,16 +26,24 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isHome = pathname === '/';
+  const showSolid = !isHome || scrolled;
+
   return (
     <>
-      <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
+      <header className={`${styles.navbar} ${showSolid ? styles.scrolled : ''}`}>
         <div className={styles.navInner}>
           {/* Logo */}
           <Link href="/" className={styles.logo}>
-            <span className={styles.logoIcon}>✦</span>
+            <span className={styles.logoIcon}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: 'var(--color-accent-gold)' }}>
+                <path d="M12 2L9 9l-7 3 7 3 3 7 3-7 7-3-7-3-3-7z" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="12" cy="12" r="3" strokeOpacity="0.4"/>
+              </svg>
+            </span>
             <div className={styles.logoText}>
-              <span className={styles.logoMain}>Nagin Nest</span>
-              <span className={styles.logoSub}>Luxury Houseboat · Kashmir</span>
+              <span className={styles.logoMain}>[YOUR HOUSEBOAT NAME]</span>
+              <span className={styles.logoSub}>[YOUR TAGLINE]</span>
             </div>
           </Link>
 
