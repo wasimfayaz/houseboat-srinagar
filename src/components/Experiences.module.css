@@ -1,0 +1,232 @@
+.experiences {
+  position: relative;
+  padding: 140px 0;
+  background: var(--color-white, #ffffff);
+  overflow: hidden;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+/* Background */
+.expBg {
+  display: none;
+}
+
+.expBgOverlay {
+  display: none;
+}
+
+/* Header */
+.expHeader {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto 64px;
+  padding: 0 24px;
+}
+
+.expHeaderInner {
+  max-width: 560px;
+}
+
+.expSubtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  max-width: 480px;
+  margin-top: 16px;
+}
+
+/* Grid */
+.expGrid {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto 80px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Card */
+.expCard {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border-light);
+  overflow: hidden;
+  transition: background 0.4s ease;
+  cursor: pointer;
+}
+
+.expCard:hover {
+  background: var(--color-cream);
+}
+
+.expCardImage {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.expCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 41, 48, 0.2) 0%,
+    transparent 50%
+  );
+}
+
+.expCardContent {
+  padding: 28px 24px 32px;
+}
+
+.expIconRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.expIcon {
+  font-size: 24px;
+}
+
+.expDuration {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  background: rgba(201, 169, 110, 0.08);
+  padding: 4px 10px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 2px;
+}
+
+.expTitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--color-deep-teal);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.expDesc {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13.5px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+.expTags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.expTag {
+  font-family: 'Outfit', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border-light);
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+
+.expLearnMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold, #c9a96e);
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.expLearnMore:hover {
+  gap: 14px;
+}
+
+/* Bottom CTA */
+.expCta {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.expCtaText {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-secondary);
+  max-width: 500px;
+}
+
+.expCtaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--color-deep-teal);
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  transition: all 0.35s ease;
+  white-space: nowrap;
+}
+
+.expCtaBtn:hover {
+  background: var(--color-deep-teal);
+  color: var(--color-white);
+  border-color: var(--color-deep-teal);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .expGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .expCta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .experiences {
+    padding: 70px 0;
+  }
+  .expGrid {
+    grid-template-columns: 1fr;
+  }
+}

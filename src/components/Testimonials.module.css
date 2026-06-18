@@ -1,0 +1,252 @@
+.testimonials {
+  background: #fff;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+/* Header */
+.tHeader {
+  max-width: 1280px;
+  margin: 0 auto 64px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+/* Display */
+.tDisplay {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+}
+
+.tQuoteMark {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 180px;
+  font-weight: 700;
+  color: rgba(201, 169, 110, 0.1);
+  position: absolute;
+  top: -60px;
+  left: 10px;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tContent {
+  position: relative;
+  z-index: 1;
+  animation: testimonialFade 0.6s ease both;
+}
+
+@keyframes testimonialFade {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tText {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--color-text-primary, #1a1a1a);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Author */
+.tAuthor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.tAvatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-teal, #133d47), var(--color-accent-gold, #c9a96e));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.tAuthorInfo {
+  text-align: left;
+}
+
+.tName {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-deep-teal, #0a2930);
+  margin-bottom: 2px;
+}
+
+.tLocation {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  color: var(--color-text-muted, #8a8a8a);
+}
+
+.tStay {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-gold, #c9a96e);
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.tRating {
+  display: flex;
+  gap: 2px;
+  margin-left: auto;
+}
+
+.tStar {
+  color: var(--color-accent-gold, #c9a96e);
+  font-size: 14px;
+}
+
+/* Navigation */
+.tNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.tDots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(10, 41, 48, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  padding: 0;
+}
+
+.tDotActive {
+  background: var(--color-accent-gold, #c9a96e);
+  width: 24px;
+  border-radius: 3px;
+}
+
+.tCounter {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.tCountActive {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--color-deep-teal, #0a2930);
+}
+
+.tCountSep {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  color: rgba(10, 41, 48, 0.3);
+}
+
+.tCountTotal {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  color: rgba(10, 41, 48, 0.4);
+}
+
+/* Badges */
+.tBadges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 64px;
+  padding: 40px 24px;
+  background: var(--color-deep-teal, #0a2930);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tBadge {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 32px;
+}
+
+.tBadgeNum {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--color-accent-gold, #c9a96e);
+  line-height: 1;
+}
+
+.tBadgeStars {
+  font-size: 12px;
+  color: var(--color-accent-gold, #c9a96e);
+  letter-spacing: 1px;
+}
+
+.tBadgeSource {
+  font-family: 'Outfit', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-top: 2px;
+}
+
+.tBadgeDivider {
+  width: 1px;
+  height: 50px;
+  background: rgba(201, 169, 110, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .testimonials {
+    padding: 70px 0;
+  }
+  .tAuthor {
+    flex-direction: column;
+    text-align: center;
+  }
+  .tAuthorInfo {
+    text-align: center;
+  }
+  .tRating {
+    margin: 0 auto;
+  }
+  .tBadges {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .tBadgeDivider {
+    width: 60px;
+    height: 1px;
+  }
+}

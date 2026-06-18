@@ -1,0 +1,319 @@
+.bookingPage {
+  background-color: var(--color-cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.bookingContainer {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 125px 24px 80px; /* Offset for navbar */
+  flex-grow: 1;
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 56px;
+  animation: fadeUp 0.8s ease;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--color-deep-teal);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(14px, 1.2vw, 16px);
+  color: var(--color-text-secondary);
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: start;
+  animation: fadeUp 0.8s ease 0.15s both;
+}
+
+/* Common Card Style */
+.card {
+  padding: 48px;
+  border-radius: 4px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-smooth);
+}
+
+/* Direct Booking Card (Left) */
+.directCard {
+  background-color: var(--color-deep-teal);
+  color: var(--color-cream);
+  border: 1px solid var(--color-teal-mid);
+}
+
+.directCard:hover {
+  box-shadow: var(--shadow-teal);
+}
+
+.recommendedBadge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  border: 1px solid rgba(201, 169, 110, 0.4);
+  padding: 4px 10px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  background-color: rgba(201, 169, 110, 0.08);
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.directCard .cardTitle {
+  color: var(--color-white);
+}
+
+.cardDesc {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.65;
+  margin-bottom: 36px;
+}
+
+.directCard .cardDesc {
+  color: rgba(250, 246, 239, 0.75);
+}
+
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.fieldLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  margin-bottom: 8px;
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.selectInput {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  appearance: none; /* Hide default arrow */
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.selectInput:focus {
+  border-color: var(--color-accent-gold-light);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.selectInput option {
+  background-color: var(--color-deep-teal);
+  color: var(--color-white);
+}
+
+.selectArrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--color-accent-gold);
+  display: flex;
+  align-items: center;
+}
+
+.whatsappBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px;
+  background-color: #25D366; /* WhatsApp official green */
+  color: var(--color-white);
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+  margin-top: 32px;
+}
+
+.whatsappBtn:hover {
+  background-color: #20ba59;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+}
+
+.whatsappIcon {
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* Online Partners Card (Right) */
+.partnersCard {
+  background-color: var(--color-white);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-light);
+}
+
+.partnersCard:hover {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--color-border);
+}
+
+.partnersCard .cardTitle {
+  color: var(--color-deep-teal);
+}
+
+.partnersCard .cardDesc {
+  color: var(--color-text-secondary);
+}
+
+.partnerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.partnerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px 24px;
+  background-color: transparent;
+  border: 1px solid var(--color-border-light);
+  border-radius: 2px;
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.partnerBtn:hover {
+  border-color: var(--color-deep-teal);
+  background-color: rgba(10, 41, 48, 0.02);
+  color: var(--color-deep-teal);
+}
+
+.partnerIcon {
+  color: var(--color-text-muted);
+  transition: var(--transition-fast);
+}
+
+.partnerBtn:hover .partnerIcon {
+  color: var(--color-deep-teal);
+  transform: translate(2px, -2px);
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--color-border-light);
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.assistanceSection {
+  font-family: var(--font-sans);
+}
+
+.assistanceLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.assistancePhone {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--color-deep-teal);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+
+.assistancePhone:hover {
+  color: var(--color-accent-gold);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 960px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    max-width: 540px;
+    gap: 24px;
+  }
+  .card {
+    padding: 36px;
+  }
+  .bookingContainer {
+    padding: 100px 24px 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 20px;
+  }
+  .bookingContainer {
+    padding: 80px 16px 40px;
+  }
+}

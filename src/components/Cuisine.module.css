@@ -1,0 +1,198 @@
+.cuisine {
+  background: var(--color-cream, #faf6ef);
+  padding: 140px 0;
+  overflow: hidden;
+}
+
+.cuisineInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Image Side */
+.cuisineImageWrap {
+  position: relative;
+}
+
+.cuisineImage {
+  position: relative;
+  height: 580px;
+  overflow: hidden;
+}
+
+.cuisineImage img {
+  transition: transform 0.7s ease !important;
+}
+
+.cuisineImageWrap:hover .cuisineImage img {
+  transform: scale(1.03) !important;
+}
+
+.cuisineImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 41, 48, 0.2) 0%,
+    transparent 60%
+  );
+}
+
+/* Floating Card */
+.cuisineFloatCard {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--color-white, #ffffff);
+  border: 1px solid var(--color-border);
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 300px;
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+
+.cuisineFloatIcon {
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.cuisineFloatTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold, #c9a96e);
+  margin-bottom: 4px;
+}
+
+.cuisineFloatText {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Content Side */
+.cuisineContent {
+  padding-left: 20px;
+}
+
+.cuisineTitle {
+  margin: 8px 0 20px;
+}
+
+.cuisineTitle em {
+  font-style: italic;
+  color: var(--color-accent-gold, #c9a96e);
+}
+
+.cuisineDesc {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--color-text-secondary, #4a4a4a);
+  margin-bottom: 36px;
+}
+
+/* Dish Grid */
+.dishGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 36px;
+  margin-bottom: 32px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.dishCard {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border-light);
+  padding: 16px 0;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.dishCard:hover {
+  border-bottom-color: var(--color-accent-gold);
+}
+
+.dishHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.dishNumber {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-accent-gold);
+  letter-spacing: 0.1em;
+}
+
+.dishName {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-deep-teal, #0a2930);
+}
+
+.dishDesc {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--color-text-muted, #8a8a8a);
+}
+
+/* Note */
+.cuisineNote {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--color-accent-gold, #c9a96e);
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cuisineInner {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .cuisineContent {
+    padding-left: 0;
+  }
+  .cuisineFloatCard {
+    bottom: -20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cuisine {
+    padding: 70px 0;
+  }
+  .cuisineImage {
+    height: 380px;
+  }
+  .dishGrid {
+    grid-template-columns: 1fr;
+  }
+  .cuisineFloatCard {
+    position: static;
+    margin-top: 16px;
+    max-width: 100%;
+  }
+}
