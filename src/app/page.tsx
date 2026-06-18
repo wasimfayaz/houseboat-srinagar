@@ -1,5 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import MobileStats from '@/components/MobileStats';
+import WebsiteCTA from '@/components/WebsiteCTA';
 import Intro from '@/components/Intro';
 import Houseboats from '@/components/Houseboats';
 import Amenities from '@/components/Amenities';
@@ -20,6 +22,8 @@ export default function Home() {
       <StickyBook />
       <Navbar />
       <Hero />
+      <MobileStats />
+      <WebsiteCTA />
       <Intro />
       <Houseboats />
       <Amenities />

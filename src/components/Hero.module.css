@@ -121,7 +121,7 @@
 
 .heroTitle {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-size: clamp(2.2rem, 6vw, 6rem);
   font-weight: 300;
   color: #fff;
   line-height: 1.1;
@@ -304,6 +304,15 @@
   }
 }
 
+/* Desktop-only: hide on mobile */
+.statsDesktop {
+  display: flex;
+}
+
+.ctaSecondaryDesktop {
+  display: inline-flex;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .badge {
@@ -314,15 +323,16 @@
     bottom: 110px;
   }
   .heroContent {
-    padding-bottom: 120px;
+    padding-bottom: 80px;
   }
   .heroCtas {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
     gap: 12px;
+    margin-bottom: 0;
   }
-  .ctaPrimary, .ctaSecondary {
+  .ctaPrimary {
     width: 100%;
     justify-content: center;
     text-align: center;
@@ -330,29 +340,35 @@
 }
 
 @media (max-width: 640px) {
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    max-width: 100%;
-    width: 100%;
-    margin-top: 24px;
-  }
-  .statDivider {
+  /* Hide stats & secondary CTA inside hero on mobile */
+  .statsDesktop {
     display: none;
   }
-  .stat {
-    align-items: center;
-    text-align: center;
+  .ctaSecondaryDesktop {
+    display: none;
   }
-  .statNum {
-    font-size: 24px;
+
+  /* Reduce heading size ~30% on mobile */
+  .heroTitle {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    margin-bottom: 16px;
   }
-  .statLabel {
-    font-size: 8px;
-    letter-spacing: 0.05em;
+
+  .heroDesc {
+    font-size: 14px;
+    margin-bottom: 28px;
+    line-height: 1.7;
   }
+
+  .eyebrow {
+    margin-bottom: 14px;
+  }
+
   .scrollIndicator {
-    display: none; /* Hide scroll indicator on very small screens to clear visual clutter */
+    display: none;
+  }
+
+  .heroContent {
+    padding-bottom: 60px;
   }
 }

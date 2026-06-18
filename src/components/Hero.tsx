@@ -50,7 +50,7 @@ export default function Hero() {
       {/* Hero Content */}
       <div className={styles.heroContent}>
         <div className={styles.heroInner}>
-          <span className={styles.eyebrow}>01 &nbsp;/&nbsp; [LOCATION]</span>
+          <span className={styles.eyebrow}>01 &nbsp;/&nbsp; Location</span>
 
           <h1 className={styles.heroTitle}>
             Where Heaven<br />
@@ -58,7 +58,7 @@ export default function Hero() {
           </h1>
 
           <p className={styles.heroDesc}>
-            [YOUR PROPERTY DESCRIPTION] — A luxury houseboat experience where centuries of heritage
+            Property Description — A luxury houseboat experience where centuries of heritage
             meet modern comfort on the waters of Kashmir.
           </p>
 
@@ -69,26 +69,26 @@ export default function Hero() {
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </Link>
-            <Link href="#houseboats" className={styles.ctaSecondary} id="hero-explore-btn">
+            <Link href="#houseboats" className={`${styles.ctaSecondary} ${styles.ctaSecondaryDesktop}`} id="hero-explore-btn">
               <span>Explore The Rooms</span>
             </Link>
           </div>
 
-          {/* Stats */}
-          <div className={styles.stats}>
+          {/* Stats — hidden on mobile, shown via MobileStats section */}
+          <div className={`${styles.stats} ${styles.statsDesktop}`}>
             <div className={styles.stat}>
-              <span className={styles.statNum}>[YEARS]</span>
+              <span className={styles.statNum}>Years</span>
               <span className={styles.statLabel}>Years of Heritage</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <span className={styles.statNum}>[GUESTS]+</span>
+              <span className={styles.statNum}>Guests+</span>
               <span className={styles.statLabel}>Happy Guests</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
               <span className={styles.statNum} style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                [RATING]
+                Rating
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent-gold)" stroke="none" style={{ flexShrink: 0 }}>
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                 </svg>
