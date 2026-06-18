@@ -5,9 +5,9 @@ import styles from './Footer.module.css';
 
 const footerLinks = {
   rooms: [
-    { label: '[ROOM NAME 1]', href: '/booking' },
-    { label: '[ROOM NAME 2]', href: '/booking' },
-    { label: '[ROOM NAME 3]', href: '/booking' },
+    { label: 'Maharaja Suite', href: '/booking' },
+    { label: 'Royal Mughal Room', href: '/booking' },
+    { label: 'Shalimar Suite', href: '/booking' },
   ],
   experiences: [
     { label: 'Shikara Journeys', href: '/experiences/shikara-journey' },
@@ -37,26 +37,26 @@ export default function Footer() {
               </svg>
             </span>
             <div>
-              <div className={styles.footerLogoMain}>[YOUR HOUSEBOAT NAME]</div>
-              <div className={styles.footerLogoSub}>[YOUR TAGLINE]</div>
+              <div className={styles.footerLogoMain}>Houseboat Name</div>
+              <div className={styles.footerLogoSub}>Houseboat Tagline</div>
             </div>
           </div>
           <p className={styles.footerTagline}>
-            [YOUR HOUSEBOAT NAME] — [YOUR TAGLINE]. A floating heritage experience where
+            Houseboat Name — Houseboat Tagline. A floating heritage experience where
             every stay is personal, private, and unforgettable.
           </p>
           <div className={styles.footerContact}>
             <div className={styles.footerContactItem}>
               <span style={{ color: 'var(--color-accent-gold)', marginRight: '4px', fontWeight: 500 }}>T:</span>
-              <span>[PHONE NUMBER]</span>
+              <span>Phone Number</span>
             </div>
             <div className={styles.footerContactItem}>
               <span style={{ color: 'var(--color-accent-gold)', marginRight: '4px', fontWeight: 500 }}>E:</span>
-              <span>[EMAIL ADDRESS]</span>
+              <span>Email Address</span>
             </div>
             <div className={styles.footerContactItem}>
               <span style={{ color: 'var(--color-accent-gold)', marginRight: '4px', fontWeight: 500 }}>A:</span>
-              <span>[ADDRESS], [LOCATION]</span>
+              <span>Address, Location</span>
             </div>
           </div>
           <div className={styles.socialLinks}>

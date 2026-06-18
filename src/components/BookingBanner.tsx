@@ -92,9 +92,9 @@ export default function BookingBanner() {
                 onChange={(e) => setFormData({ ...formData, houseboat: e.target.value })}
               >
                 <option value="Any Room">Any Room</option>
-                <option value="[ROOM NAME 1]">[ROOM NAME 1]</option>
-                <option value="[ROOM NAME 2]">[ROOM NAME 2]</option>
-                <option value="[ROOM NAME 3]">[ROOM NAME 3]</option>
+                <option value="Maharaja Suite">Maharaja Suite</option>
+                <option value="Royal Mughal Room">Royal Mughal Room</option>
+                <option value="Shalimar Suite">Shalimar Suite</option>
               </select>
             </div>
           </div>

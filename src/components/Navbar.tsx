@@ -42,8 +42,8 @@ export default function Navbar() {
               </svg>
             </span>
             <div className={styles.logoText}>
-              <span className={styles.logoMain}>[YOUR HOUSEBOAT NAME]</span>
-              <span className={styles.logoSub}>[YOUR TAGLINE]</span>
+              <span className={styles.logoMain}>Houseboat Name</span>
+              <span className={styles.logoSub}>Houseboat Tagline</span>
             </div>
           </Link>
 

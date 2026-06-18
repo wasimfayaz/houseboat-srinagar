@@ -7,34 +7,34 @@ import styles from './Houseboats.module.css';
 const rooms = [
   {
     id: 'room-1',
-    name: '[ROOM NAME 1]',
-    category: '[ROOM CATEGORY]',
-    tagline: '[ROOM TAGLINE OR SHORT DESCRIPTION]',
-    price: '[PRICE]',
+    name: 'Maharaja Suite',
+    category: 'Master Suite',
+    tagline: 'The pinnacle of luxury with panoramic lake views and hand-carved cedar interiors.',
+    price: 'Price',
     unit: '/ night',
-    features: ['[Feature 1]', '[Feature 2]', '[Feature 3]', '[Feature 4]'],
+    features: ['Luxury Bathtub & Shower', 'Khatamband Cedar Ceilings', 'Private Lakefront Balcony', '24/7 Dedicated Butler Service'],
     badge: 'Most Popular',
     image: '/maharaja-suite.png',
   },
   {
     id: 'room-2',
-    name: '[ROOM NAME 2]',
-    category: '[ROOM CATEGORY]',
-    tagline: '[ROOM TAGLINE OR SHORT DESCRIPTION]',
-    price: '[PRICE]',
+    name: 'Royal Mughal Room',
+    category: 'Premium Room',
+    tagline: 'Stunning heritage accents blending traditional Kashmiri style with modern comfort.',
+    price: 'Price',
     unit: '/ night',
-    features: ['[Feature 1]', '[Feature 2]', '[Feature 3]', '[Feature 4]'],
+    features: ['En-suite Bath & Hot Tub', 'Electric Room & Bed Heating', 'Sauna & Steam Room Access', 'Traditional Kashmiri Carpets'],
     badge: null,
     image: '/mughal-room.png',
   },
   {
     id: 'room-3',
-    name: '[ROOM NAME 3]',
-    category: '[ROOM CATEGORY]',
-    tagline: '[ROOM TAGLINE OR SHORT DESCRIPTION]',
-    price: '[PRICE]',
+    name: 'Shalimar Suite',
+    category: 'Lake View Suite',
+    tagline: 'Wake up to serene waters with direct deck access and classic wood paneling.',
+    price: 'Price',
     unit: '/ night',
-    features: ['[Feature 1]', '[Feature 2]', '[Feature 3]', '[Feature 4]'],
+    features: ['Modern Bathtub', 'Private Sit-out Balcony', 'Wood-paneled Sauna Cabin', 'Traditional Tea Service (Kahwa)'],
     badge: 'Romantic',
     image: '/shalimar-room.png',
   },
@@ -70,7 +70,7 @@ export default function Houseboats() {
         </div>
         <div className={`${styles.hbTopRight} reveal-right`}>
           <p className={styles.hbDesc}>
-            [YOUR HOUSEBOAT NAME] features [NUMBER] exclusive guest rooms on board, each thoughtfully designed
+            Houseboat Name features three exclusive guest rooms on board, each thoughtfully designed
             to offer privacy, heritage craftsmanship, and breathtaking lake views.
           </p>
           <Link href="/booking" className={styles.viewAll} id="view-all-houseboats">

@@ -5,8 +5,8 @@ import BookingBanner from '@/components/BookingBanner';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Houseboat Rooms & Suites | [YOUR HOUSEBOAT NAME]",
-  description: "Explore our exclusive guest rooms. Handcrafted woodwork, private decks, and luxury heritage stay on [LOCATION].",
+  title: "Houseboat Rooms & Suites | Houseboat Name",
+  description: "Explore our exclusive guest rooms. Handcrafted woodwork, private decks, and luxury heritage stay on Location.",
 };
 
 export default function RoomsPage() {
@@ -16,7 +16,7 @@ export default function RoomsPage() {
       <PageHeader 
         sectionNumber="03 / Guest Rooms" 
         title="Our Guest Rooms & Suites" 
-        subtitle="[YOUR HOUSEBOAT NAME] features handcrafted heritage guest rooms, custom designed for ultimate privacy and tranquility on the lake." 
+        subtitle="Houseboat Name features handcrafted heritage guest rooms, custom designed for ultimate privacy and tranquility on the lake." 
       />
       <Houseboats />
       <BookingBanner />

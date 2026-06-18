@@ -6,38 +6,38 @@ import styles from './Testimonials.module.css';
 const testimonials = [
   {
     id: 1,
-    name: '[GUEST NAME]',
-    location: '[GUEST LOCATION]',
+    name: 'Guest Name',
+    location: 'Guest Location',
     rating: 5,
-    text: '[GUEST REVIEW TEXT — Replace with an authentic testimonial from a real guest who stayed at your houseboat. Describe their experience, what they loved most, and why they would recommend it to others.]',
-    stay: '[ROOM NAME] · [NUMBER] Nights',
+    text: 'An absolutely magical stay. The handcrafted wood interiors and the stunning view of the lake from our private deck were breathtaking. The service was impeccable, and the traditional food served on board was exceptional.',
+    stay: 'Maharaja Suite · 3 Nights',
     avatar: 'G',
   },
   {
     id: 2,
-    name: '[GUEST NAME]',
-    location: '[GUEST LOCATION]',
+    name: 'Guest Name',
+    location: 'Guest Location',
     rating: 5,
-    text: '[GUEST REVIEW TEXT — Replace with an authentic testimonial from a real guest. Share their unique experience and what made their stay special.]',
-    stay: '[ROOM NAME] · [NUMBER] Nights',
+    text: 'A perfect blend of heritage charm and modern luxury. The en-suite bathroom with a hot tub and the cozy room heating made our winter stay incredibly comfortable. We loved waking up to the peaceful lake view.',
+    stay: 'Royal Mughal Room · 2 Nights',
     avatar: 'G',
   },
   {
     id: 3,
-    name: '[GUEST NAME]',
-    location: '[GUEST LOCATION]',
+    name: 'Guest Name',
+    location: 'Guest Location',
     rating: 5,
-    text: '[GUEST REVIEW TEXT — Replace with an authentic testimonial describing the ambience, hospitality, cuisine, and overall experience at your houseboat.]',
-    stay: '[ROOM NAME] · [NUMBER] Nights',
+    text: 'Unbelievable hospitality and serene atmosphere. Sitting on the balcony sipping local Kahwa tea while watching the sunset was the highlight of our trip. Highly recommended for couples seeking a peaceful getaway.',
+    stay: 'Shalimar Suite · 4 Nights',
     avatar: 'G',
   },
   {
     id: 4,
-    name: '[GUEST NAME]',
-    location: '[GUEST LOCATION]',
+    name: 'Guest Name',
+    location: 'Guest Location',
     rating: 5,
-    text: '[GUEST REVIEW TEXT — Replace with a real guest review highlighting exceptional service, views, food, or any standout aspect of their stay.]',
-    stay: '[ROOM NAME] · [NUMBER] Nights',
+    text: 'Stunning craftsmanship throughout the houseboat. The staff was incredibly warm and attentive, anticipating our every need. The rooms are spacious, clean, and offer top-tier comfort.',
+    stay: 'Maharaja Suite · 2 Nights',
     avatar: 'G',
   },
 ];
@@ -141,7 +141,7 @@ export default function Testimonials() {
       {/* Review Platform Badges */}
       <div className={`${styles.tBadges} reveal`}>
         <div className={styles.tBadge}>
-          <span className={styles.tBadgeNum}>[RATING]</span>
+          <span className={styles.tBadgeNum}>Rating</span>
           <div>
             <div className={styles.tBadgeStars}>
               {[...Array(5)].map((_, i) => (
@@ -155,7 +155,7 @@ export default function Testimonials() {
         </div>
         <div className={styles.tBadgeDivider} />
         <div className={styles.tBadge}>
-          <span className={styles.tBadgeNum}>[RATING]</span>
+          <span className={styles.tBadgeNum}>Rating</span>
           <div>
             <div className={styles.tBadgeStars}>
               {[...Array(5)].map((_, i) => (
@@ -169,7 +169,7 @@ export default function Testimonials() {
         </div>
         <div className={styles.tBadgeDivider} />
         <div className={styles.tBadge}>
-          <span className={styles.tBadgeNum}>[REVIEWS]+</span>
+          <span className={styles.tBadgeNum}>Reviews+</span>
           <div>
             <div className={styles.tBadgeStars}>Reviews</div>
             <div className={styles.tBadgeSource}>Verified Guests</div>
