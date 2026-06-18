@@ -36,9 +36,15 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className={styles.logo}>
             <span className={styles.logoIcon}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: 'var(--color-accent-gold)' }}>
-                <path d="M12 2L9 9l-7 3 7 3 3 7 3-7 7-3-7-3-3-7z" strokeLinecap="round" strokeLinejoin="round"/>
-                <circle cx="12" cy="12" r="3" strokeOpacity="0.4"/>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-accent-gold)' }}>
+                <path d="M2 20c3-1.5 5-1.5 8 0s5 1.5 8 0 4-1.5 6 0" />
+                <path d="M3 14h18l-2 3.5H5L3 14z" fill="currentColor" fillOpacity="0.1" />
+                <path d="M5 14v-5h12v5" />
+                <path d="M4 9l6.5-3.5 6.5 3.5" />
+                <rect x="7" y="10.5" width="2.5" height="3" rx="0.3" />
+                <circle cx="13.5" cy="11.5" r="1" />
+                <line x1="19.5" y1="14" x2="19.5" y2="8.5" />
+                <path d="M19.5 8.5l2.5 1.25-2.5 1.25" />
               </svg>
             </span>
             <div className={styles.logoText}>
