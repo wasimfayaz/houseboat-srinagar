@@ -53,6 +53,10 @@
   color: #fff;
   letter-spacing: 0.05em;
   line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
 }
 
 .logoSub {
@@ -64,6 +68,10 @@
   color: rgba(201, 169, 110, 0.8);
   line-height: 1;
   margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
 }
 
 /* Desktop Nav */
@@ -249,8 +257,48 @@
   }
 }
 
+/* Mobile: shrink logo, keep hamburger always visible */
 @media (max-width: 640px) {
+  .navbar {
+    padding: 14px 0;
+  }
+
+  .navbar.scrolled {
+    padding: 10px 0;
+  }
+
+  .navInner {
+    padding: 0 16px;
+    gap: 8px;
+  }
+
+  .logoIcon {
+    font-size: 18px;
+  }
+
+  .logoMain {
+    font-size: 14px;
+    max-width: 120px;
+  }
+
+  .logoSub {
+    font-size: 8px;
+    max-width: 120px;
+    letter-spacing: 0.15em;
+  }
+
   .bookBtn {
     display: none;
+  }
+
+  /* Make hamburger larger tap target */
+  .hamburger {
+    display: flex;
+    padding: 8px;
+  }
+
+  .hamburger span {
+    width: 20px;
+    height: 2px;
   }
 }
